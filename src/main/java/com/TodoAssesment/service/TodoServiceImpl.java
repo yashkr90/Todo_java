@@ -31,7 +31,7 @@ public class TodoServiceImpl implements TodoService {
 	public void deleteTodo(Integer id) {
 		// TODO Auto-generated method stub
 		Todo tempTodo= todoRepository.getReferenceById(id);
-		todoRepository.delete(tempTodo);;
+		todoRepository.deleteById(id);;
 	}
 
 	@Override
