@@ -1,21 +1,26 @@
 server:
-  port: 8081
+  port: 5000
 
 spring:
   application:
     name: todo-app
     
   datasource:
-    url: jdbc:h2:mem:testDB
-    username: sa
-    password: sa
+    url: jdbc:mysql://database-1.cghscqwgostc.us-east-1.rds.amazonaws.com:3306/hr
+    username: admins
+    password: yash1234
     
-  h2:
-    console:
-      path: /h2
-      enabled: true
-      settings:
-        web-allow-others: true
+#  h2:
+#    console:
+#      path: /h2
+#      enabled: true
+#      settings:
+#        web-allow-others: true
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
         
         
 management:
